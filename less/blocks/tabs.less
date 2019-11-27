@@ -1,3 +1,106 @@
 .tabs {
+  position: relative;
+  padding-top: 120px;
+  overflow: hidden;
   
+  &::before {
+    content: "E";
+    position: absolute;
+    z-index: -1;
+    top: -50px;
+    left: 0;
+    font-family: "Lora", "Arial", serif;
+    color: #f7f7f7;
+    font-size: 500px;
+    line-height: 1;
+    font-weight: 700;
+  }
+  
+  .wrapper {
+    position: relative;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 180px;
+      width: 335px;
+      height: 560px;
+      background-image: url(../img/images/pattern.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &::before {
+      right: ~"calc(50% + 620px)";
+    }
+    &::after {
+       left: ~"calc(50% + 620px)";
+    }
+  }
+  
+  .title {
+    position: absolute;
+    margin: 0;
+    top: 40px;
+    left: 20px;
+  }
+}
+
+.tabs__wrap {
+  display: flex;
+}
+
+.tabs__aside {
+  width: 290px;
+  padding-top: 220px;
+}
+
+.tabs__fields {
+  width: ~"calc(100% - 290px)";
+  min-height: 800px;
+  padding: 50px;
+  padding-top: 200px;
+  padding-bottom: 60px;
+  font-size: 14px;
+  line-height: 22px;
+  border: 10px solid rgb(244, 244, 246);
+  background-color: #fff;
+}
+
+.tabs__list {
+  .reset();
+  list-style: none;
+  
+  .ui-tabs-active {
+    font-weight: 700;
+    
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.tabs__item {
+  position: relative;
+  margin-bottom: 25px;
+  
+  a {
+    outline: none;
+  }
+  
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 9px;
+    left: -20px;
+    width: 40px;
+    height: 4px;
+    background-color: #fceb00;
+  }
+}
+
+.tabs__btn {
+  width: 240px;
 }
