@@ -1,40 +1,41 @@
 .tabs {
   position: relative;
   padding-top: 120px;
+  padding-bottom: 60px;
   overflow: hidden;
   
-  &::before {
-    content: "E";
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
-    z-index: -1;
-    top: -50px;
-    left: 0;
-    font-family: "Lora", "Arial", serif;
-    color: #f7f7f7;
-    font-size: 500px;
-    line-height: 1;
-    font-weight: 700;
+    top: 180px;
+    width: 335px;
+    height: 560px;
+    background-image: url(../img/images/pattern.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &::before {
+    right: ~"calc(50% + 620px)";
+  }
+  &::after {
+     left: ~"calc(50% + 620px)";
   }
   
   .wrapper {
     position: relative;
     
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 180px;
-      width: 335px;
-      height: 560px;
-      background-image: url(../img/images/pattern.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
     &::before {
-      right: ~"calc(50% + 620px)";
-    }
-    &::after {
-       left: ~"calc(50% + 620px)";
+      content: "E";
+      position: absolute;
+      z-index: -1;
+      top: -240px;
+      left: -230px;
+      font-family: "Lora", "Arial", serif;
+      color: #f7f7f7;
+      font-size: 700px;
+      line-height: 1;
+      font-weight: 700;
     }
   }
   
@@ -59,17 +60,23 @@
   width: ~"calc(100% - 290px)";
   min-height: 800px;
   padding: 50px;
-  padding-top: 200px;
-  padding-bottom: 60px;
+  padding-top: 210px;
+  padding-bottom: 55px;
   font-size: 14px;
   line-height: 22px;
   border: 10px solid rgb(244, 244, 246);
   background-color: #fff;
+  
+  p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .tabs__list {
   .reset();
   list-style: none;
+  margin-bottom: 40px;
   
   .ui-tabs-active {
     font-weight: 700;
@@ -82,7 +89,7 @@
 
 .tabs__item {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   
   a {
     outline: none;
@@ -103,4 +110,5 @@
 
 .tabs__btn {
   width: 240px;
+  margin-bottom: 50px;
 }

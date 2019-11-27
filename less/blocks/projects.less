@@ -1,34 +1,38 @@
 .projects {
-  position: relative;
-  z-index: 5;
   padding-top: 100px;
   padding-bottom: 45px;
   background-color: #e7e9ed;
+  overflow: hidden;
   
-  &::before {
-    content: "Y";
-    position: absolute;
-    z-index: -1;
-    top: 45px;
-    left: 0;
-    font-family: "Lora", "Arial", serif;
-    color: #e0e2e6;
-    font-size: 500px;
-    line-height: 1;
-    font-weight: 700;
-  }
-  
-  &::after {
-    content: "Z";
-    position: absolute;
-    z-index: -1;
-    bottom: 200px;
-    right: 0;
-    font-family: "Lora", "Arial", serif;
-    color: #e0e2e6;
-    font-size: 500px;
-    line-height: 1;
-    font-weight: 700;
+  .wrapper {
+    position: relative;
+    z-index: 5;
+    
+    &::before {
+      content: "Y";
+      position: absolute;
+      z-index: -1;
+      top: -90px;
+      left: -240px;
+      font-family: "Lora", "Arial", serif;
+      color: #e0e2e6;
+      font-size: 700px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    &::after {
+      content: "Z";
+      position: absolute;
+      z-index: -1;
+      bottom: 95px;
+      right: -290px;
+      font-family: "Lora", "Arial", serif;
+      color: #e0e2e6;
+      font-size: 700px;
+      line-height: 1;
+      font-weight: 700;
+    }
   }
 }
 
@@ -36,7 +40,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   
   .title {
     margin: 0;
@@ -57,7 +61,7 @@
 
 .projects__btn {
   position: relative;
-  margin-left: 30px;
+  margin-left: 28px;
   font-weight: 700;
   opacity: 0.5;
   cursor: pointer;
@@ -125,7 +129,7 @@
 
 .projects__info {
   width: ~"calc(100% - 630px)";
-  padding: 30px 50px;
+  padding: 35px 50px;
 }
 
 .projects__name {
@@ -140,6 +144,7 @@
 }
 
 .projects__link {
+  width: 160px;
   margin-top: 30px;
 }
 
@@ -147,4 +152,8 @@
   b {
     margin-right: 15px;
   }
+}
+
+.projects__text {
+  line-height: 1.45;
 }
