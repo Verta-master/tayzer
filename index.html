@@ -113,8 +113,98 @@
     
     <section class="projects">
       <div class="wrapper">
-        <p class="title">Наши проекты</p>
-        
+        <div class="projects__title">
+          <p class="title">Наши проекты</p>
+          <div id="options">
+            <ul class="projects__btns filter-button-group">
+              <li class="projects__btn is-checked" data-filter="*">Все</li>
+              <li class="projects__btn" data-filter=".kitchen">Кухня</li>
+              <li class="projects__btn" data-filter=".bedroom">Спальня</li>
+              <li class="projects__btn" data-filter=".bathroom">Ванная</li>
+              <li class="projects__btn" data-filter=".livingroom">Гостиная</li>
+              <li class="projects__btn" data-filter=".kidsroom">Детская</li>
+              <li class="projects__btn" data-filter=".hall">Прихожая</li>
+            </ul>
+          </div>
+        </div>
+        <ul class="projects__list isotope">
+          <li class="projects__item kitchen">
+            <figure class="projects__img">
+              <img src="img/images/img-1.jpg" alt="Потолок">
+            </figure>
+            <div class="projects__info">
+              <p class="projects__name">Потолок в гостиную 17 м2</p>
+              <div class="projects__rating">
+                <b>Оценка заказчика</b>
+                <img src="img/icons/star.png" alt="1">
+                <img src="img/icons/star.png" alt="2">
+                <img src="img/icons/star.png" alt="3">
+                <img src="img/icons/star.png" alt="4">
+                <img src="img/icons/star-white.png" alt="5">
+              </div>
+              <div class="projects__text">
+                <p><b>Включено:</b><br>
+                  Полотно MonLange M7001 (3.50)<br>
+                  Обработка угла<br>
+                  Профиль для парящих потолков Алюм.
+                </p>
+              </div>
+              <div class="projects__price">24 416 р</div>
+              <a href="#" class="btn projects__link">Подробнее</a>
+            </div>
+          </li>
+          <li class="projects__item bedroom">
+            <figure class="projects__img">
+              <img src="img/images/img-2.jpg" alt="Потолок">
+            </figure>
+            <div class="projects__info">
+              <p class="projects__name">Потолок в гостиную 17 м2</p>
+              <div class="projects__rating">
+                <b>Оценка заказчика</b>
+                <img src="img/icons/star.png" alt="1">
+                <img src="img/icons/star.png" alt="2">
+                <img src="img/icons/star.png" alt="3">
+                <img src="img/icons/star.png" alt="4">
+                <img src="img/icons/star-white.png" alt="5">
+              </div>
+              <div class="projects__text">
+                <p><b>Включено:</b><br>
+                  Полотно MonLange M7001 (3.50)<br>
+                  Обработка угла<br>
+                  Профиль для парящих потолков Алюм.
+                </p>
+              </div>
+              <div class="projects__price">24 416 р</div>
+              <a href="#" class="btn projects__link">Подробнее</a>
+            </div>
+          </li>
+          <li class="projects__item kitchen">
+            <figure class="projects__img">
+              <img src="img/images/img-3.jpg" alt="Потолок">
+            </figure>
+            <div class="projects__info">
+              <p class="projects__name">Потолок в гостиную 17 м2</p>
+              <div class="projects__rating">
+                <b>Оценка заказчика</b>
+                <img src="img/icons/star.png" alt="1">
+                <img src="img/icons/star.png" alt="2">
+                <img src="img/icons/star.png" alt="3">
+                <img src="img/icons/star.png" alt="4">
+                <img src="img/icons/star-white.png" alt="5">
+              </div>
+              <div class="projects__text">
+                <p><b>Включено:</b><br>
+                  Полотно MonLange M7001 (3.50)<br>
+                  Обработка угла<br>
+                  Профиль для парящих потолков Алюм.
+                </p>
+              </div>
+              <div class="projects__price">24 416 р</div>
+              <a href="#" class="btn projects__link">Подробнее</a>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="btn btn--fill projects__more">Показать еще 12</a>
       </div>
     </section>
     
@@ -297,9 +387,29 @@
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  
+<!-- Tabs -->
   <script>
     $(function() {
       $("#tabs").tabs();
+    });
+  </script>
+  
+<!-- Isotope filter -->
+  <script>
+    $(document).ready(function() {
+      var $container = $('.isotope');
+      $('.filter-button-group .projects__btn').click(function(){
+        var $this = $(this);
+        if ( !$this.hasClass('is-checked') ) {
+          $this.parents('#options').find('.is-checked').removeClass('is-checked');
+          $this.addClass('is-checked');
+        }
+        var selector = $this.attr('data-filter');
+        $container.isotope({  itemSelector: '.projects__item', filter: selector });
+        return false;
+      });
     });
   </script>
 </body>
