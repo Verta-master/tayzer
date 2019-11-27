@@ -1,0 +1,36 @@
+.benefits {
+  position: relative;
+  
+  &::before {
+    content: "A";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-family: "Lora", "Arial", serif;
+    color: #f7f7f7;
+    font-size: 500px;
+    line-height: 1;
+    font-weight: 700;
+  }
+}
+
+.benefits__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.benefits__item {
+  width: 300px;
+  max-width: 100%;
+  margin-right: 50px;
+  margin-bottom: 15px;
+}
+
+.benefits__img {
+  height: 70px;
+}

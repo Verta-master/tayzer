@@ -1,0 +1,25 @@
+.social {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.social__item {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.social__link {
+  opacity: 0.5;
+  .transition();
+  
+  &:hover,
+  &:active {
+    opacity: 1;
+    .transition();
+  }
+}
