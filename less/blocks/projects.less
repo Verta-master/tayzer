@@ -1,3 +1,150 @@
 .projects {
+  position: relative;
+  z-index: 5;
+  padding-top: 100px;
+  padding-bottom: 45px;
   background-color: #e7e9ed;
+  
+  &::before {
+    content: "Y";
+    position: absolute;
+    z-index: -1;
+    top: 45px;
+    left: 0;
+    font-family: "Lora", "Arial", serif;
+    color: #e0e2e6;
+    font-size: 500px;
+    line-height: 1;
+    font-weight: 700;
+  }
+  
+  &::after {
+    content: "Z";
+    position: absolute;
+    z-index: -1;
+    bottom: 200px;
+    right: 0;
+    font-family: "Lora", "Arial", serif;
+    color: #e0e2e6;
+    font-size: 500px;
+    line-height: 1;
+    font-weight: 700;
+  }
+}
+
+.projects__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  
+  .title {
+    margin: 0;
+    line-height: 1;
+    width: ~"calc(100% - 660px)";
+  }
+}
+
+.projects__btns {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 660px;
+}
+
+.projects__btn {
+  position: relative;
+  margin-left: 30px;
+  font-weight: 700;
+  opacity: 0.5;
+  cursor: pointer;
+  .transition();
+  
+  &:hover,
+  &:active {
+    opacity: 1;
+    .transition();
+  }
+  
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+    height: 4px;
+    background-color: #eee035;
+  }
+}
+
+.projects__btn.is-checked {
+  opacity: 1;
+  
+  &::after {
+    display: block;
+  }
+}
+
+.projects__more {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects__list {
+  .reset();
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.projects__item {
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.projects__img {
+  width: 630px;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 50%;
+  }
+}
+
+.projects__info {
+  width: ~"calc(100% - 630px)";
+  padding: 30px 50px;
+}
+
+.projects__name {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.projects__price {
+  font-weight: 700;
+}
+
+.projects__link {
+  margin-top: 30px;
+}
+
+.projects__rating {
+  b {
+    margin-right: 15px;
+  }
 }
