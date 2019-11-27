@@ -460,6 +460,7 @@ h1,
 .btn {
   width: 200px;
   height: 50px;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -708,6 +709,101 @@ h1,
 .projects {
   background-color: #e7e9ed;
 }
+.tabs {
+  position: relative;
+  padding-top: 120px;
+  overflow: hidden;
+}
+.tabs::before {
+  content: "E";
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: 0;
+  font-family: "Lora", "Arial", serif;
+  color: #f7f7f7;
+  font-size: 500px;
+  line-height: 1;
+  font-weight: 700;
+}
+.tabs .wrapper {
+  position: relative;
+}
+.tabs .wrapper::before,
+.tabs .wrapper::after {
+  content: "";
+  position: absolute;
+  top: 180px;
+  width: 335px;
+  height: 560px;
+  background-image: url(../img/images/pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tabs .wrapper::before {
+  right: calc(50% + 620px);
+}
+.tabs .wrapper::after {
+  left: calc(50% + 620px);
+}
+.tabs .title {
+  position: absolute;
+  margin: 0;
+  top: 40px;
+  left: 20px;
+}
+.tabs__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tabs__aside {
+  width: 290px;
+  padding-top: 220px;
+}
+.tabs__fields {
+  width: calc(100% - 290px);
+  min-height: 800px;
+  padding: 50px;
+  padding-top: 200px;
+  padding-bottom: 60px;
+  font-size: 14px;
+  line-height: 22px;
+  border: 10px solid #f4f4f6;
+  background-color: #fff;
+}
+.tabs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tabs__list .ui-tabs-active {
+  font-weight: 700;
+}
+.tabs__list .ui-tabs-active::before {
+  display: block;
+}
+.tabs__item {
+  position: relative;
+  margin-bottom: 25px;
+}
+.tabs__item a {
+  outline: none;
+}
+.tabs__item::before {
+  content: "";
+  display: none;
+  position: absolute;
+  z-index: -1;
+  top: 9px;
+  left: -20px;
+  width: 40px;
+  height: 4px;
+  background-color: #fceb00;
+}
+.tabs__btn {
+  width: 240px;
+}
 .clients {
   position: relative;
   padding-bottom: 90px;
@@ -816,6 +912,7 @@ h1,
           justify-content: space-between;
 }
 .footer__comment {
+  margin-top: auto;
   opacity: 0.5;
   font-size: 14px;
 }
@@ -878,4 +975,16 @@ h1,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
