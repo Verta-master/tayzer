@@ -439,7 +439,8 @@ h3,
 h4,
 h5,
 h6,
-.title {
+.title,
+.title-2 {
   font-family: "Lora", "Arial", serif;
   color: #333333;
   font-weight: 400;
@@ -450,6 +451,12 @@ h1,
   margin-bottom: 20px;
   font-size: 60px;
   line-height: 80px;
+}
+h2,
+.title-2 {
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 37px;
 }
 .wrapper {
   width: 1150px;
@@ -1160,4 +1167,84 @@ h1,
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+.info__title {
+  margin-bottom: 85px;
+  padding-top: 105px;
+  padding-bottom: 60px;
+  background-color: #f4f4f6;
+  border-bottom: 5px solid rgba(51, 51, 51, 0.1);
+}
+.info__title .title {
+  margin: 0;
+}
+.info__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 95px;
+}
+.info__item {
+  margin-bottom: 87px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.info__item:nth-child(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.info__item:nth-child(2n) .info__text {
+  padding-left: 0;
+  padding-right: 60px;
+}
+.info__pic {
+  position: relative;
+  width: 380px;
+}
+.info__pic::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  left: 20px;
+  width: 360px;
+  height: 430px;
+  background-color: #f4f4f6;
+}
+.info__img {
+  width: 350px;
+  height: 430px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+.info__img img {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+.info__text {
+  width: calc(100% - 380px);
+  padding-left: 60px;
+}
+.info__btn {
+  width: 160px;
+  margin-top: 37px;
 }
