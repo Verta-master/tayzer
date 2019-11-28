@@ -5,3 +5,21 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.letter {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "R";
+    position: absolute;
+    z-index: -1;
+    bottom: 340px;
+    left: ~"calc(50% + 340px)";
+    font-family: "Lora", "Arial", serif;
+    color: #f7f7f7;
+    font-size: 700px;
+    line-height: 1;
+    font-weight: 700;
+  }
+}
