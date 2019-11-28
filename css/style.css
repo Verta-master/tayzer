@@ -656,6 +656,7 @@ h2,
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 .promo .title {
   max-width: 100%;
@@ -1295,6 +1296,7 @@ h2,
 }
 .form__comment {
   font-size: 14px;
+  text-align: center;
 }
 .form__comment a {
   text-decoration: underline;
@@ -1531,5 +1533,13 @@ h2,
   }
   .info {
     overflow: hidden;
+  }
+  .projects__rating b {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .menu__subitem {
+    margin-right: 0;
+    width: 100%;
   }
 }
